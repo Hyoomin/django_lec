@@ -1,15 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>메인 페이지</title>
-</head>
-<body>
-<nav>
-    <a href="/company/">company info</a>
-    <a href="/mysite/">product</a>
-</nav>
-
-<h1>메인 페이지입니다.</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>메인 페이지</title>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+            }
+        </style>
+<!--        <link rel="stylesheet" type="text/css" href="style.css">-->
+    </head>
+    <body>
+        <!-- <nav>
+            <a href="/company/">company info</a>
+            <a href="/mysite/">product</a>
+        </nav> -->
+        <style>
+            .main_menu{
+                height: 200px;
+                width: 1420px;
+                background: red;
+                display: flex;
+                list-style: none;
+                border-collapse: collapse;
+                margin: 0px;
+                padding: 0px;
+                color: white;
+                font-size: 30px;
+            }
+            .login{
+                position: relative;
+                background: blue;
+                width: 300px;
+                height: 200px;
+                left: 50px;
+                top: 200px;
+            }
+            .main_notice{
+                position: relative;
+                left: 500px;
+                width: 800px;
+                height: 400px;
+                background: green;
+            }
+            .main_menu > li{
+                margin-left: 50px;
+            }
+        </style>
+        {% extends 'base.html' %}
+        {% block content %}
+        <div>
+            <ul class="main_menu">
+                <li><a href='#'>가이드</a></li>
+                <li><a href='#'>커뮤니티</a></li>
+                <li><a href='#'>공지사항</a></li>
+                <li><a href='#'>Game Start</a></li>
+                <li><a href='#'>이벤트</a></li>
+                <li><a href='#'>고객센터</a></li>
+                <li><a href='#'>게임정보</a></li>
+            </ul>
+        </div>
+        <div class="login">
+            <div class="login_btn">
+                <button>로그인</button>
+            </div>
+            <input type="login" placeholder="ID">
+            <input type="login" placeholder="PASSWORD">
+        </div>
+        <div class="main_notice">
+            <li><a href='#'>공지사항</a></li>
+        </div>
+        <h1>메인 페이지입니다.</h1>
+        {% endblock %}
+    </body>
 </html>
